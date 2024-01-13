@@ -54,6 +54,9 @@
                                             data.unit = `{{ $item->banyak_unit }}`;
                                             data.status = `{{ $item->status }}`;
                                             data.total = `{{ $total }}`;
+                                            data.tagihan = `{{ $tagihan }}`;
+                                            data.invoice = `{{ $invoice }}`;
+                                            data.batasbayar = `{{ $batasbayar }}`;
                                             action = `{{ route('sewa-alat.destroy', ['sewa_alat' => $item]) }}`;
                                             download = `{{ route('sewa-alat.download-permohonan', ['sewa_alat' => $item]) }}`;
 
@@ -155,11 +158,11 @@
                         Nama Pemilik Rekening: Wuri Handayani<br><br>
                         <b>2. Detail Tagihan:</b><br>
                         Nomor Invoice/Faktur:<br>
-                        {{ $invoice }} <br>
+                        <span x-text="data.invoice"></span><br>
                         Jumlah Pembayaran:<br>
-                        {{ $tagihan }} <br><br>
+                        <span x-text="data.tagihan"></span><br><br>
                         <b>3. Batas Waktu Pembayaran:</b><br>
-                        Pembayaran diharapkan diterima paling lambat pada {{ $batasbayar }}.<br> Jika pembayaran tidak diterima pada waktu yang ditentukan, pesaan akan dibatalkan secara otomatis.<br><br>
+                        Pembayaran diharapkan diterima paling lambat pada <span x-text="data.batasbayar"></span>.<br> Jika pembayaran tidak diterima pada waktu yang ditentukan, pesaan akan dibatalkan secara otomatis.<br><br>
                         <b>4. Konfirmasi Pembayaran:</b><br>
                         Mohon konfirmasikan pembayaran Anda dengan mengirimkan bukti transfer atau konfirmasi pembayaran ke stageof.yogya@bmkg.go.id.<br><br>
                         <b>5. Hubungi Kami:</b><br>
