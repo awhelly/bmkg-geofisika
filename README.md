@@ -19,6 +19,8 @@
 - Edit `.env` (sesuaikan database, dll)
 - Migrate database: `php artisan migrate:fresh`
 - Optimize project: `php artisan optimize`
+- Start vite! `npm run dev`
+- Open new terminal
 - Start projet! `php artisan serve`
 
 ## Kelompok:
