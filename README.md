@@ -17,7 +17,8 @@
 - Install composer packages: `composer install`
 - Install node packages: `npm i`
 - Edit `.env` (sesuaikan database, dll)
-- Migrate database: `php artisan migrate:fresh`
+- Migrate database: `php artisan migrate:fresh` 
+  atau `php artisan migrate:fresh --seed` jika ingin dengan data awal 
 - Optimize project: `php artisan optimize`
 - Start vite! `npm run dev`
 - Open new terminal
